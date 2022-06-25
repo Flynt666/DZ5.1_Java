@@ -35,7 +35,8 @@ public class BonusServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void shouldCalculateForUnRegisteredAndUnderLimit() {
+    void shouldCalculateForUnRegisteredAndUnderLimit() {    // пользователь не зарегистрирован и потратил минимальную сумму для получения бонуса
+
         BonusService service = new BonusService();
 
         // подготавливаем данные:
@@ -51,7 +52,7 @@ public class BonusServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void shouldCalculateForUnRegisteredAndOverLimit() {
+    void shouldCalculateForUnRegisteredAndOverLimit() { // пользователь не зарегистрирован, потратил большую сумму  и получил максимальный бонус
         BonusService service = new BonusService();
 
         // подготавливаем данные:
@@ -67,7 +68,7 @@ public class BonusServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void shouldCalculateForRegisteredAndUnderBonus() {
+    void shouldCalculateForRegisteredAndUnderBonus() { // пользователь зарегистрирован, потратил сумму, за которую бонус не даётся  и получил максимальный бонус
         BonusService service = new BonusService();
 
         // подготавливаем данные:
@@ -83,7 +84,7 @@ public class BonusServiceTest {
     }
 
     @org.junit.jupiter.api.Test
-    void shouldCalculateForUnRegisteredAndUnderBonus() {
+    void shouldCalculateForUnRegisteredAndUnderBonus() {  // пользователь не зарегистрирован, потратил сумму, за которую бонус не даётся  и получил максимальный бонус
         BonusService service = new BonusService();
 
         // подготавливаем данные:
